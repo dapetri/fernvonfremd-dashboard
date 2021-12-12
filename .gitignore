@@ -41,3 +41,6 @@ webpack-bundle.json
 
 # Exported results file
 django-queries-results.html
+
+# Local Netlify folder
+.netlify

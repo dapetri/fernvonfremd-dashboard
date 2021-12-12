@@ -13,7 +13,7 @@
   },
   "homepage": "http://getsaleor.com/",
   "engines": {
-    "node": "12.12.0",
+    "node": ">=12.12.0",
     "npm": ">=6.11.0"
   },
   "dependencies": {
@@ -206,6 +206,8 @@
     ]
   },
   "scripts": {
+    "deploy": "aws s3 sync build/dashboard s3://fernvonfremd-dashboard",
+    
     "build-storybook": "build-storybook -c src/storybook/ -o build/storybook",
     "build-types": "apollo client:codegen --target=typescript types --globalTypesFile=src/types/globalTypes.ts",
     "build": "webpack -p",
